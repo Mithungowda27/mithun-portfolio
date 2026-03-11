@@ -427,3 +427,59 @@ footer {
   .github-card, .resume-card { flex-direction: column; padding: 36px 24px; gap: 28px; }
   footer { flex-direction: column; gap: 12px; text-align: center; }
 }
+
+/* HAMBURGER MENU */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 12px;
+  cursor: pointer;
+  z-index: 200;
+}
+.hamburger span {
+  display: block;
+  width: 22px; height: 2px;
+  background: var(--white);
+  border-radius: 2px;
+  transition: transform 0.3s, opacity 0.3s;
+}
+.hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; }
+.hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+@media (max-width: 768px) {
+  .hamburger { display: flex; }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(10,10,15,0.97);
+    backdrop-filter: blur(20px);
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    z-index: 150;
+  }
+  .nav-links.open { display: flex; }
+  .nav-links a {
+    font-size: 1.5rem;
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+    color: var(--white);
+  }
+  .nav-links a:hover { color: var(--accent); }
+}
+
+/* Restore normal cursor on touch/mobile devices */
+@media (hover: none) and (pointer: coarse) {
+  body { cursor: auto !important; }
+  .cursor, .cursor-ring { display: none !important; }
+  .btn-primary, .btn-ghost, a, button { cursor: pointer !important; }
+}
