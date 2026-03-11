@@ -16,14 +16,17 @@
 <!-- NAV -->
 <nav>
   <div class="nav-logo">Mithun <span>M</span></div>
-  <div class="nav-links">
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-    <a href="#resume">Resume</a>
-    <a href="#contact">Contact</a>
+  <div class="nav-links" id="navLinks">
+    <a href="#home" onclick="closeMenu()">Home</a>
+    <a href="#about" onclick="closeMenu()">About</a>
+    <a href="#skills" onclick="closeMenu()">Skills</a>
+    <a href="#projects" onclick="closeMenu()">Projects</a>
+    <a href="#resume" onclick="closeMenu()">Resume</a>
+    <a href="#contact" onclick="closeMenu()">Contact</a>
   </div>
+  <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
 
 <!-- HOME -->
@@ -49,7 +52,7 @@
     </div>
     <div class="hero-stats">
       <div class="stat-item">
-        <div class="stat-num">8.64</div>
+        <div class="stat-num">8.6<span>4</span></div>
         <div class="stat-label">CGPA</div>
       </div>
       <div class="stat-item">
@@ -74,19 +77,9 @@
     </div>
     <div class="about-grid">
       <div class="about-text reveal">
-        <p>
-          I'm <strong>Mithun M</strong>, a software developer with a passion for building systems that bridge the physical and digital worlds. 
-          My journey through Electronics & Communication Engineering gave me a unique edge in IoT development, 
-          while my self-driven learning in full-stack development opened doors to web applications.
-        </p>
-        <p>
-          I thrive when working on problems that require both <strong>hardware intuition</strong> and <strong>software craftsmanship</strong> — 
-          whether it's an RFID-powered attendance system or a real-time monitoring dashboard.
-        </p>
-        <p>
-          My career objective is to work in an environment where I can contribute to meaningful products while continuing to grow 
-          as a full-stack or backend engineer, with a long-term focus on scalable, intelligent systems.
-        </p>
+        <p>I'm <strong>Mithun M</strong>, a software developer with a passion for building systems that bridge the physical and digital worlds. My journey through Electronics & Communication Engineering gave me a unique edge in IoT development, while my self-driven learning in full-stack development opened doors to web applications.</p>
+        <p>I thrive when working on problems that require both <strong>hardware intuition</strong> and <strong>software craftsmanship</strong> — whether it's an RFID-powered attendance system or a real-time monitoring dashboard.</p>
+        <p>My career objective is to work in an environment where I can contribute to meaningful products while continuing to grow as a full-stack or backend engineer, with a long-term focus on scalable, intelligent systems.</p>
         <div class="about-edu">
           <div class="edu-label">Education</div>
           <div class="edu-degree">B.E. in Electronics &amp; Communication Engineering</div>
@@ -96,37 +89,20 @@
             <span class="edu-badge">CGPA: 8.64</span>
           </div>
         </div>
-
         <div class="intern-card" style="margin-top:24px;">
           <div class="intern-role">Internship</div>
           <div class="intern-company">Xtrans Solutions — AIoT Intern</div>
-          <div class="intern-desc">
-            Worked on integrating Artificial Intelligence with IoT systems. Conducted in collaboration with VTU-VRIF, 
-            the project focused on intelligent automation, decision-making, and user interaction through AI-powered IoT applications.
-          </div>
+          <div class="intern-desc">Worked on integrating Artificial Intelligence with IoT systems. Conducted in collaboration with VTU-VRIF, the project focused on intelligent automation, decision-making, and user interaction through AI-powered IoT applications.</div>
         </div>
       </div>
-
       <div class="about-interests reveal">
         <div class="interest-title">Areas of Interest</div>
         <div class="interest-items">
-          <div class="interest-item">
-            <span class="interest-icon">⚡</span>
-            <span class="interest-text">Backend Development with Java Spring Boot</span>
-          </div>
-          <div class="interest-item">
-            <span class="interest-icon">🌐</span>
-            <span class="interest-text">Full-Stack Web Development (React + REST APIs)</span>
-          </div>
-          <div class="interest-item">
-            <span class="interest-icon">📡</span>
-            <span class="interest-text">IoT Systems & Embedded Applications</span>
-          </div>
-          
-          <div class="interest-item">
-            <span class="interest-icon">🗄️</span>
-            <span class="interest-text">Database Design & Optimization (SQL)</span>
-          </div>
+          <div class="interest-item"><span class="interest-icon">⚡</span><span class="interest-text">Backend Development with Java Spring Boot</span></div>
+          <div class="interest-item"><span class="interest-icon">🌐</span><span class="interest-text">Full-Stack Web Development (React + REST APIs)</span></div>
+          <div class="interest-item"><span class="interest-icon">📡</span><span class="interest-text">IoT Systems & Embedded Applications</span></div>
+          <div class="interest-item"><span class="interest-icon">🤖</span><span class="interest-text">Artificial Intelligence of Things (AIoT)</span></div>
+          <div class="interest-item"><span class="interest-icon">🗄️</span><span class="interest-text">Database Design & Optimization (SQL)</span></div>
         </div>
       </div>
     </div>
@@ -145,37 +121,25 @@
       <div class="skill-group reveal">
         <div class="skill-group-title">Programming Languages</div>
         <div class="skill-tags">
-          <span class="skill-tag">Java</span>
-          <span class="skill-tag">JavaScript</span>
-          <span class="skill-tag">HTML</span>
-          <span class="skill-tag">CSS</span>
+          <span class="skill-tag">Java</span><span class="skill-tag">JavaScript</span><span class="skill-tag">HTML</span><span class="skill-tag">CSS</span>
         </div>
       </div>
       <div class="skill-group reveal">
         <div class="skill-group-title">Frameworks & Libraries</div>
         <div class="skill-tags">
-          <span class="skill-tag">Java Spring Boot</span>
-          <span class="skill-tag">React</span>
-          <span class="skill-tag">JPA / Hibernate</span>
+          <span class="skill-tag">Java Spring Boot</span><span class="skill-tag">React</span><span class="skill-tag">Flask</span><span class="skill-tag">JPA / Hibernate</span>
         </div>
       </div>
       <div class="skill-group reveal">
         <div class="skill-group-title">Databases</div>
         <div class="skill-tags">
-          <span class="skill-tag">MySQL</span>
-          <span class="skill-tag">SQL (DDL / DML / DCL)</span>
-          <span class="skill-tag">Joins & Subqueries</span>
-          <span class="skill-tag">Normalization</span>
+          <span class="skill-tag">MySQL</span><span class="skill-tag">SQL (DDL / DML / DCL)</span><span class="skill-tag">Joins & Subqueries</span><span class="skill-tag">Normalization</span>
         </div>
       </div>
       <div class="skill-group reveal">
         <div class="skill-group-title">Tools & Platforms</div>
         <div class="skill-tags">
-          <span class="skill-tag">Eclipse</span>
-          <span class="skill-tag">VS Code</span>
-          <span class="skill-tag">Arduino IDE</span>
-          <span class="skill-tag">ESP8266</span>
-          <span class="skill-tag">Git</span>
+          <span class="skill-tag">Eclipse</span><span class="skill-tag">VS Code</span><span class="skill-tag">Arduino IDE</span><span class="skill-tag">ESP8266</span><span class="skill-tag">Git</span>
         </div>
       </div>
     </div>
@@ -191,20 +155,12 @@
       <div class="section-line"></div>
     </div>
     <div class="projects-grid">
-
       <div class="project-card reveal">
         <div class="project-num">Project 01</div>
         <div class="project-name">RFID-Based Attendance Management System</div>
-        <div class="project-desc">
-          A complete attendance automation system using RFID technology. Features a Java Spring Boot backend for RFID validation 
-          and attendance logging, a React dashboard for real-time monitoring and data visualization, and MySQL for secure storage of logs and student records.
-        </div>
+        <div class="project-desc">A complete attendance automation system using RFID technology. Features a Java Spring Boot backend for RFID validation and attendance logging, a React dashboard for real-time monitoring and data visualization, and MySQL for secure storage of logs and student records.</div>
         <div class="project-tech">
-          <span class="tech-pill">Java Spring Boot</span>
-          <span class="tech-pill">React</span>
-          <span class="tech-pill">MySQL</span>
-          <span class="tech-pill">ESP8266</span>
-          <span class="tech-pill">RFID</span>
+          <span class="tech-pill">Java Spring Boot</span><span class="tech-pill">React</span><span class="tech-pill">MySQL</span><span class="tech-pill">ESP8266</span><span class="tech-pill">RFID</span>
         </div>
         <div class="project-links">
           <a href="https://github.com/mithunmgowda27" target="_blank" class="project-link">
@@ -213,20 +169,12 @@
           </a>
         </div>
       </div>
-
       <div class="project-card reveal">
         <div class="project-num">Project 02</div>
         <div class="project-name">IoT Smart Notice Board System</div>
-        <div class="project-desc">
-          Replaces traditional paper-based notice boards with a wireless, IoT-powered alternative. 
-          Uses ESP8266 for real-time backend communication, allowing administrators to push notices 
-          remotely from a web application — displayed instantly on the notice board.
-        </div>
+        <div class="project-desc">Replaces traditional paper-based notice boards with a wireless, IoT-powered alternative. Uses ESP8266 for real-time backend communication, allowing administrators to push notices remotely from a web application — displayed instantly on the notice board.</div>
         <div class="project-tech">
-          <span class="tech-pill">ESP8266</span>
-          <span class="tech-pill">IoT</span>
-          <span class="tech-pill">Web App</span>
-          <span class="tech-pill">Wireless</span>
+          <span class="tech-pill">ESP8266</span><span class="tech-pill">IoT</span><span class="tech-pill">Web App</span><span class="tech-pill">Wireless</span>
         </div>
         <div class="project-links">
           <a href="https://github.com/mithunmgowda27" target="_blank" class="project-link">
@@ -235,20 +183,12 @@
           </a>
         </div>
       </div>
-
       <div class="project-card reveal">
         <div class="project-num">Project 03</div>
         <div class="project-name">IoT Air Pollution Monitoring System</div>
-        <div class="project-desc">
-          An intelligent monitoring system that detects harmful gases using environmental sensors and 
-          transmits readings to the cloud in real time. Provides dashboards for tracking air quality 
-          levels and alerting when thresholds are exceeded.
-        </div>
+        <div class="project-desc">An intelligent monitoring system that detects harmful gases using environmental sensors and transmits readings to the cloud in real time. Provides dashboards for tracking air quality levels and alerting when thresholds are exceeded.</div>
         <div class="project-tech">
-          <span class="tech-pill">IoT</span>
-          <span class="tech-pill">Gas Sensors</span>
-          <span class="tech-pill">Cloud</span>
-          <span class="tech-pill">Real-Time Data</span>
+          <span class="tech-pill">IoT</span><span class="tech-pill">Gas Sensors</span><span class="tech-pill">Cloud</span><span class="tech-pill">Real-Time Data</span>
         </div>
         <div class="project-links">
           <a href="https://github.com/mithunmgowda27" target="_blank" class="project-link">
@@ -257,7 +197,6 @@
           </a>
         </div>
       </div>
-
     </div>
   </div>
 </section>
@@ -308,14 +247,14 @@
           <div class="contact-value">+91 95917 49727</div>
         </div>
       </a>
-      <a href="https://linkedin.com/in/mithunm" target="_blank" class="contact-item">
+      <a href="https://www.linkedin.com/in/mithun-m-8aa3542a5" target="_blank" class="contact-item">
         <span class="contact-icon">💼</span>
         <div>
           <div class="contact-label">LinkedIn</div>
           <div class="contact-value">linkedin.com/in/mithunm</div>
         </div>
       </a>
-      <a href="https://github.com/mithunmgowda27" target="_blank" class="contact-item">
+      <a href="https://github.com/Mithungowda27" target="_blank" class="contact-item">
         <span class="contact-icon">🐙</span>
         <div>
           <div class="contact-label">GitHub</div>
@@ -328,13 +267,11 @@
 
 <!-- FOOTER -->
 <footer>
-  <div class="footer-logo">Mithun <span> M</span></div>
+  <div class="footer-logo">Mithun<span>.</span></div>
   <span>© 2026 Mithun M. All rights reserved.</span>
   <span>Bengaluru, Karnataka, India</span>
 </footer>
 
 <script src="script.js"></script>
 </body>
-
 </html>
-
